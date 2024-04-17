@@ -1,0 +1,58 @@
+<div class="rov">
+    <div class="col-lg-2">
+        <div class="d-grid"><button class="btn btn-primary brn-block" type="button" (click)="backToHome()">Back to
+                Home</button></div>
+    </div>
+</div>
+
+<div class="row mt-3">
+    <div class="col-lg-2">
+        <div class="car border-secondary mb-3">
+            <div class="card-header h3 text-muted text-center">users</div>
+            <div class="card-boady" style="min-height: 555px;">
+                <div class="row mt-1" *ngFor="let user of chatService.onlineUsers">
+                    <div class="col">
+                        <div class="d-grid">
+                            <button type="button" class="btn btn-success card-text btn-block">{{user}}</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-9">
+        <div class="card border-secondary">
+            <div class="card-header h3 text-muted text-center">message</div>
+            <div class="card-body" style="min-height: 500px;">
+                <div style="overflow-y:auto; height: 400px;">
+                    <p class="card-text">
+                        <span class="text-primary">{{chatService.myName}}</span>
+                        <span class="ml-1">Somce message goes here</span>
+                    </p>
+                    <p class="card-text">
+                        <span class="text-primary">user2</span>
+                        <span class="ml-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, quos dicta
+                            molestiae modi at perspiciatis quas. Nam ipsum magnam numquam, ad fugit nulla quis alias in,
+                            culpa necessitatibus illo, vero sequi excepturi qui dolore tenetur. Illum corporis officia
+                            voluptate soluta culpa! Tempore in hic voluptatem nemo suscipit ad, eligendi
+                            voluptas.</span>
+                    </p>
+                </div>
+            </div>
+            <div class="card-footer">
+                <form autocomplete="off">
+                    <div class="row">
+                        <div class="col-9">
+                            <input type="text" class="form-control" placeholder="Type your message here">
+                        </div>
+                        <div class="col-3">
+                            <div class="d-grid">
+                                <button class="btn btn-dark btn-block" type="submit">Send</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
