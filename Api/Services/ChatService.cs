@@ -38,7 +38,7 @@ namespace Api.Services
 				return Users.Where(x => x.Value == connectionId).Select(x => x.Key).FirstOrDefault();
 			}
 		}
-        public string GetUserByConnectionIdByUser(string user)
+        public string GetConnectionIdByUser(string user)
         {
             lock (Users)
             {
