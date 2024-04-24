@@ -4,6 +4,7 @@ import { FormGroup, FormBuilder, Validators, ReactiveFormsModule } from '@angula
 import { CommonModule } from '@angular/common';
 import { ChatService } from '../services/chat.service';
 import { ChatComponent } from "../chat/chat.component";
+import { SketchpadComponent } from "../sketchpad/sketchpad.component";
 
 @Component({
   selector: 'app-home',
@@ -13,7 +14,8 @@ import { ChatComponent } from "../chat/chat.component";
   imports: [
     ReactiveFormsModule,
     CommonModule,
-    ChatComponent
+    ChatComponent,
+    SketchpadComponent
   ]
 })
 export class HomeComponent {
